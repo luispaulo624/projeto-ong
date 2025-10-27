@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Painel Administrativo</title>
+    <link rel="stylesheet" href="assets/css/admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <h2>Painel Admin</h2>
+            <nav>
+                <ul>
+                    <li class="active"><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="admin-projetos.html">Gerenciar Projetos</a></li>
+                    <li><a href="admin-voluntarios.html">Gerenciar Voluntários</a></li>
+                    <li><a href="index.html">Sair (Voltar ao Site)</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="admin-content">
+            <header>
+                <h1>Dashboard</h1>
+            </header>
+            <section class="metrics">
+                <div class="metric-card">
+                    <h3>Novos Voluntários</h3>
+                    <p class="metric-number">12</p>
+                    <span>(Últimos 30 dias)</span>
+                </div>
+                <div class="metric-card">
+                    <h3>Doações Recebidas</h3>
+                    <p class="metric-number">R$ 1.250,00</p>
+                    <span>(Este mês)</span>
+                </div>
+                <div class="metric-card">
+                    <h3>Visitas ao Site</h3>
+                    <p class="metric-number">4,789</p>
+                    <span>(Este mês)</span>
+                </div>
+            </section>
+            <section>
+                <h2>Gerenciar Informações Institucionais</h2>
+                <form class="admin-form">
+                    <label for="missao">Missão da ONG:</label>
+                    <textarea id="missao" rows="4">Promover o desenvolvimento humano e social através da educação e de ações comunitárias.</textarea>
+                    
+                    <label for="visao">Visão da ONG:</label>
+                    <textarea id="visao" rows="4">Ser uma organização de referência na transformação social em nossa região.</textarea>
+                    
+                    <button type="submit">Salvar Informações</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
