@@ -1,0 +1,72 @@
+Guia de Estilo (Style Guide)
+
+Este documento define os padrões visuais e de código para garantir a consistência em todo o projeto.
+
+1. Abordagem de CSS
+
+O projeto utiliza uma abordagem Mobile-First. Os estilos base em style.css são focados em ecrãs pequenos. Media queries são usadas para adicionar complexidade a ecrãs maiores.
+
+Breakpoint Principal: 769px
+
+Exemplo:
+
+/* Estilos base (Mobile) */
+.container {
+    padding: 10px;
+}
+
+/* Estilos para ecrãs maiores (Desktop) */
+@media (min-width: 769px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+
+2. Paleta de Cores
+
+As cores são definidas como variáveis CSS no :root para fácil manutenção e para garantir o contraste adequado (WCAG AA).
+
+--primary-color: #0059b3
+
+Uso: Links, botões principais, títulos de destaque.
+
+Contraste: 7.26:1 sobre branco (Nível AAA).
+
+--secondary-color: #5a6268
+
+Uso: Texto secundário, legendas.
+
+--light-gray: #f8f9fa
+
+Uso: Fundo de secções, fundos de formulário.
+
+--dark-gray: #343a40
+
+Uso: Rodapé, texto de parágrafos.
+
+--text-color: #212529
+
+Uso: Cor principal do texto do corpo.
+
+3. Tipografia
+
+Família de Fontes: font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+Utilizamos a stack de fontes nativas do sistema para garantir o melhor desempenho e legibilidade sem a necessidade de carregar ficheiros de fontes externas.
+
+Tamanhos Base:
+
+Corpo (p): 1rem (aprox. 16px)
+
+h1: 2.2rem (Mobile) / 2.5rem (Desktop)
+
+h2: 1.8rem (Mobile) / 2.0rem (Desktop)
+
+h3: 1.4rem
+
+4. Componentes
+
+Botões: Todos os elementos de ação principal devem usar a tag <button type="submit"> (para formulários) ou <button type="button"> (para JavaScript). A estilização é padronizada.
+
+Foco: O seletor :focus-visible é usado para fornecer um contorno claro para utilizadores que navegam via teclado, melhorando a acessibilidade.

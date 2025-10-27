@@ -1,0 +1,67 @@
+Especificação Funcional
+
+Este documento detalha o comportamento esperado das funcionalidades interativas do projeto.
+
+1. Formulários Públicos
+
+1.1. Cadastro de Voluntário (voluntariado.html)
+
+Objetivo: Coletar dados do voluntário de forma robusta e com boa experiência de utilizador.
+
+Campos: Utiliza múltiplos tipos de input HTML5 (text, email, tel, date, checkbox, radio).
+
+Validação: Utiliza atributos HTML5 (required, pattern) para validação instantânea no lado do cliente.
+
+Máscaras (JavaScript):
+
+CPF: Formatado automaticamente para 000.000.000-00 enquanto o utilizador digita.
+
+Telefone: Formatado para (00) 00000-0000.
+
+CEP: Formatado para 00000-000.
+
+API (JavaScript):
+
+Ao sair do campo CEP, o script consome a API ViaCEP.
+
+Se o CEP for válido, os campos Rua, Bairro, Cidade e Estado são preenchidos automaticamente. Os campos são definidos como readonly.
+
+Envio (JavaScript):
+
+O envio padrão do formulário é prevenido (event.preventDefault()).
+
+Uma notificação customizada ("Cadastro Enviado com Sucesso!") é exibida.
+
+O formulário é limpo (form.reset()).
+
+Nota: Nenhum dado é realmente enviado, pois não há backend.
+
+1.2. Formulário de Contacto (contato.html)
+
+Comportamento: Formulário HTML padrão com validação required e type="email". O envio recarrega a página (comportamento padrão).
+
+1.3. Formulário de Newsletter (footer)
+
+Comportamento: Formulário HTML padrão com validação required e type="email".
+
+2. Página de Transparência (transparencia.html)
+
+Gráficos (Canvas):
+
+Os três gráficos (Pizza, Linha, Barras) são desenhados dinamicamente usando a API do Canvas 2D e dados fictícios definidos no ficheiro assets/js/graficos.js.
+
+Download de Relatórios:
+
+Os links de download utilizam a propriedade download e um Data URL (href="data:text/plain,").
+
+Isso força o download de um ficheiro .txt vazio com o nome especificado (ex: relatorio-anual-2024.txt) sem a necessidade de hospedar ficheiros reais.
+
+3. Painel Administrativo
+
+Estado: O painel administrativo é um protótipo front-end. Não há autenticação real ou conexão com banco de dados.
+
+Login (login.html): O formulário redireciona para o dashboard.html via action="dashboard.html" para simular um login bem-sucedido.
+
+Dashboard (dashboard.html): Apresenta métricas estáticas e um formulário para "Gerir Informações Institucionais" que não salva os dados.
+
+Gestão de Projetos (admin-projetos.html): Exibe uma tabela estática. Os botões "Editar" e "Excluir" são links <a> que não executam ações.

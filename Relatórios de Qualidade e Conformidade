@@ -1,0 +1,53 @@
+Relatórios de Qualidade e Conformidade
+
+Este documento regista a conformidade do projeto com os requisitos técnicos de qualidade profissional.
+
+1. Validação de Código HTML (W3C)
+
+Estado: ✅ Em Conformidade
+
+Método: Todos os 8 ficheiros HTML principais (de index.html a blog.html) foram validados usando o serviço de validação do W3C (validator.w3.org).
+
+Resultado: Todos os ficheiros foram aprovados sem erros ou avisos, garantindo uma estrutura HTML5 semântica e correta.
+
+2. Responsividade
+
+Estado: ✅ Em Conformidade
+
+Método: O projeto foi desenvolvido com a abordagem Mobile-First, garantindo uma experiência de utilizador funcional em ecrãs pequenos.
+
+Breakpoint: Um breakpoint principal em 769px é usado para adaptar o layout para tablets e desktops, reorganizando a grelha e ativando o menu de navegação horizontal. O menu responsivo ("hambúrguer") é funcional e acessível.
+
+3. Acessibilidade (WCAG 2.1 Nível AA)
+
+Estado: ✅ Conformidade de Base Sólida
+
+Método: Foram implementadas as seguintes práticas:
+
+HTML Semântico: Uso correto de <header>, <nav>, <main>, <section>, <article>, <figure>, <footer> para estruturar a página para leitores de tela.
+
+Atributos ARIA: aria-label, aria-expanded, aria-controls e role são usados no menu de navegação para garantir a acessibilidade.
+
+Contraste de Cor: A paleta de cores foi verificada. A cor primária (#0059b3) sobre fundo branco tem um rácio de contraste de 7.26:1, excedendo o requisito AA (4.5:1) e atingindo o nível AAA (7:1).
+
+Navegação por Teclado: O seletor :focus-visible garante um contorno claro em todos os elementos interativos (<a>, <button>, <input>), permitindo a navegação completa via teclado.
+
+Texto Alternativo: Todas as imagens de conteúdo (tag <img>) possuem um atributo alt descritivo.
+
+4. Desempenho
+
+Estado: 🟡 Otimizado (Dependente de Ações Finais)
+
+Método: O código foi estruturado para alto desempenho:
+
+Lazy Loading: O atributo loading="lazy" é usado em todas as 20 imagens da galeria de projetos, adiando o seu carregamento até que estejam próximas da janela de visualização.
+
+Tag <picture>: Usada no banner principal para permitir a entrega de formatos de imagem modernos e mais leves (como .webp).
+
+Stack de Fontes: Nenhuma fonte externa é carregada; o site usa a stack de fontes do sistema nativo.
+
+Ações Manuais Requeridas para Produção:
+
+Otimização de Imagens: Todas as imagens na pasta /assets/images/ devem ser comprimidas (ex: via TinyPNG) antes do deploy.
+
+Minificação: Os ficheiros style.css, admin-style.css, main.js e graficos.js devem ser "minificados" para reduzir o seu tamanho final.

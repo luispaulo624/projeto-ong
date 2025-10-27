@@ -1,0 +1,63 @@
+Visão Geral do Projeto
+
+Este documento detalha os objetivos, público-alvo e funcionalidades planeadas para a plataforma.
+
+1. Objetivo Geral
+
+Desenvolver uma plataforma web completa e profissional que permita a ONGs gerir as suas atividades, divulgar projetos, captar recursos e engajar voluntários.
+
+2. Personas e Casos de Uso
+
+A plataforma foi desenhada para atender a quatro perfis de utilizadores principais:
+
+Visitante:
+
+Conhecer a organização e os seus projetos.
+
+Aceder a informações de contacto.
+
+Visualizar galeria de atividades.
+
+Partilhar conteúdo em redes sociais.
+
+Voluntário:
+
+Descobrir oportunidades de voluntariado.
+
+Candidatar-se a projetos (preenchendo o formulário de cadastro).
+
+Acompanhar histórico de participação (funcionalidade de backend).
+
+Doador/Apoiador:
+
+Conhecer projetos e impactos.
+
+Realizar doações (visualizando as informações de PIX/Conta).
+
+Acompanhar aplicação de recursos (via página de transparência).
+
+Administrador da ONG:
+
+Aceder a um painel de controlo protegido por login.
+
+Gerir informações institucionais (missão, visão, valores).
+
+Cadastrar, editar e excluir projetos.
+
+Acompanhar métricas de engajamento (visitas, doações, voluntários).
+
+Gerir voluntários cadastrados.
+
+3. Funcionalidades Principais (Módulos)
+
+Área Institucional: Página inicial, Sobre Nós (com missão, visão, valores) e Blog.
+
+Gestão de Projetos: Página de projetos e galeria de fotos e vídeos.
+
+Engajamento de Voluntários: Página de voluntariado com formulário de cadastro complexo.
+
+Captação de Recursos: Página de doações com informações bancárias.
+
+Comunicação e Transparência: Página de transparência com gráficos de impacto e relatórios para download.
+
+Painel Administrativo: Área restrita (simulada) para gestão de conteúdo e métricas.
